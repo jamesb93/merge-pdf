@@ -1,0 +1,49 @@
+[tool.briefcase]
+project_name = "pdfmerge"
+bundle = "bradbury.pdfmerge"
+version = "0.0.1"
+url = "https://pdfmerge.bradbury/pdfmerge"
+license = "GNU General Public License v3 or later (GPLv3+)"
+author = 'James Bradbury'
+author_email = "jamesbradbury93@gmail.com"
+
+[tool.briefcase.app.pdfmerge]
+formal_name = "pdfmerge"
+description = "Merges PDF's"
+icon = "src/pdfmerge/resources/pdfmerge"
+sources = ['src/pdfmerge']
+requires = []
+
+
+[tool.briefcase.app.pdfmerge.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.pdfmerge.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev20',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.pdfmerge.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev20',
+]
+
+# Mobile deployments
+[tool.briefcase.app.pdfmerge.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.pdfmerge.android]
+requires = [
+    'toga-android>=0.3.0.dev20',
+]
