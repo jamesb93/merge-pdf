@@ -19,13 +19,7 @@ class pdfmerge(toga.App):
     def startup(self):
         self.db = {}
         self.root = None
-        main_box = toga.Box(
-            style=Pack(
-                direction=COLUMN,
-                width=250,
-                height=600
-            )
-        )
+        main_box = toga.Box(style=Pack(direction=COLUMN))
 
         self.pdf_tree = toga.Table(
             headings = ['File'],
